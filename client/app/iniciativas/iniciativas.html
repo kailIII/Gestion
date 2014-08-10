@@ -1,0 +1,94 @@
+
+<div class="page page-table">
+
+    <section class="panel panel-default table-dynamic">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>Iniciativas </strong></div>
+
+
+
+        <table class="table table-bordered table-striped table-responsive">
+            <thead>
+            <tr>
+                <th><div class="th">
+                    Solicitante
+                        <span class="glyphicon glyphicon-chevron-up"
+                              data-ng-click=" order('name') "
+                              data-ng-class="{active: row == 'name'}"></span>
+                        <span class="glyphicon glyphicon-chevron-down"
+                              data-ng-click=" order('-name') "
+                              data-ng-class="{active: row == '-name'}"></span>
+                </div></th>
+                <th colspan="4"><div class="th">
+                    Nombre Iniciativa
+                        <span class="glyphicon glyphicon-chevron-up"
+                              data-ng-click=" order('price') "
+                              data-ng-class="{active: row == 'price'}"></span>
+                        <span class="glyphicon glyphicon-chevron-down"
+                              data-ng-click=" order('-price') "
+                              data-ng-class="{active: row == '-price'}"></span>
+                </div></th>
+                <th><div class="th">
+                    Fecha solicitud
+                        <span class="glyphicon glyphicon-chevron-up"
+                              data-ng-click=" order('sales') "
+                              data-ng-class="{active: row == 'sales'}"></span>
+                        <span class="glyphicon glyphicon-chevron-down"
+                              data-ng-click=" order('-sales') "
+                              data-ng-class="{active: row == '-sales'}"></span>
+                </div></th>
+                <th><div class="th">
+                    Estado
+                        <span class="glyphicon glyphicon-chevron-up"
+                              data-ng-click=" order('rating') "
+                              data-ng-class="{active: row == 'rating'}"></span>
+                        <span class="glyphicon glyphicon-chevron-down"
+                              data-ng-click=" order('-rating') "
+                              data-ng-class="{active: row == '-rating'}"></span>
+                </div></th>
+                <th><div class="th">
+                   Empresa
+                        <span class="glyphicon glyphicon-chevron-up"
+                              data-ng-click=" order('rating') "
+                              data-ng-class="{active: row == 'rating'}"></span>
+                        <span class="glyphicon glyphicon-chevron-down"
+                              data-ng-click=" order('-rating') "
+                              data-ng-class="{active: row == '-rating'}"></span>
+                </div></th>
+                <th><div class="th">
+                    Opciones
+
+                </div></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="store in lstIniciativas">
+                <td>{{store.solicitante}}</td>
+                <td colspan="4">{{store.nombreProyecto}}</td>
+                <td>{{store.fechaSolicitud}}</td>
+                <td>{{store.estadoIniciativa}}</td>
+                <td>{{store.empresa}}</td>
+                <td><a href="pages/aprobarIniciativa" ng-show="store.estadoIniciativa=='Pendiente'"><span  class="glyphicon glyphicon-list-alt" style="font-size:24px;"></span></a>
+                    <span class="glyphicon glyphicon-time" style="font-size:24px;"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <footer class="table-footer">
+            <div class="row">
+
+                <div class="col-md-6 text-right pagination-container">
+                    <pagination class="pagination-sm"
+                                ng-model="currentPage"
+                                total-items="filteredStores.length"
+                                max-size="4"
+                                ng-change="select(currentPage)"
+                                items-per-page="numPerPage"
+                                rotate="false"
+                                boundary-links="true"></pagination>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+</div>

@@ -1,0 +1,59 @@
+<div class="page">
+
+<div class="row">
+
+    <div class="col-md-12">
+        <section class="panel panel-default">
+            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>Crear Iniciativa</strong></div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="nombreDelProyecto" class="col-sm-2 control-label">Nombre del Proyecto</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="nombreDelProyecto" placeholder="Nombre del Proyecto">
+                        </div>
+                        <label  class="col-sm-1 control-label">Solicitante</label>
+                        <div class="col-sm-4">
+
+                            <input type="text" class="form-control" disabled="" value="{{nombreUsuario}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">Fecha de Solicitud</label>
+                        <div class="col-sm-2">
+
+                            <input type="text" class="form-control" disabled="" value="{{fechaSolicitud}}">
+                        </div>
+                        <label  class="col-sm-1 control-label">Empresa</label>
+                        <div class="col-sm-2">
+                            <span class="ui-select"><select ng-model="empresa" ng-options="opt for opt in listas.empresa"></select></span>
+                        </div>
+                        <label  class="col-sm-2 control-label">Departamento</label>
+                        <div class="col-sm-2">
+                            <span class="ui-select"><select ng-model="departamento" ng-options="opt for opt in listas.departamento"></select></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resumenEjecutivo" class="col-sm-2 control-label">Resumen Ejecutivo</label>
+                        <div class="col-sm-10">
+                            <textarea name="resumenEjecutivo" id="resumenEjecutivo" value ="{{proyecto.resumenEjecutivo}}" class="form-control" rows="10"></textarea>
+                        </div>
+                    </div>
+<br>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-info">Crear Iniciativa</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+
+</div>
