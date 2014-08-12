@@ -97,8 +97,8 @@
                 <td>{{store.oneGoing}}</td>
                 <td>{{store.estado}}</td>
                 <td>{{store.etapa}}</td>
-                <td><a href="pages/crearPreEvaluacion" ng-show="store.etapa==''"><span  class="glyphicon glyphicon-list-alt" style="font-size:24px;"></span></a>
-                    <span class="glyphicon glyphicon-time" style="font-size:24px;"></span>
+                <td><a href="/pages/docEvaluacion" ng-show="store.etapa=='Evaluación'"><span  class="glyphicon glyphicon-list-alt" style="font-size:24px;"></span></a>
+                    <a href="pages/crearPreEvaluacion" ng-show="store.etapa=='Pre-Evaluación'"><span class="glyphicon glyphicon-list-alt" style="font-size:24px;"></span></a>
                 </td>
             </tr>
             </tbody>
