@@ -1,0 +1,109 @@
+
+<div class="page">
+
+ <div class="row" >
+ 
+ <div  class="col-lg-5">
+  <div class="panel panel-default">
+            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>Actualizar Proyecto </strong></div>
+
+ <form class="form-horizontal" role="form">
+<div class="row">
+                    <div class="form-group">
+                        <label for="proyecto.saludProyecto" class="col-sm-4 control-label">Salud Proyecto</label>
+                        <div class="col-sm-3">
+                    <span class="ui-select"><select ng-model="proyecto.saludProyecto" ng-options="opt for opt in listas.saludProyecto"></select></span>
+                </div>
+                      
+                      
+                    </div>
+                        <div class="form-group">
+                        <label for="proyecto.desviacion.valor" class="col-sm-4 control-label">Dev. Costos</label>
+                        <div class="col-sm-2">
+                            <input type="number" ng-model="proyecto.desviacion.valor"  class="form-control" id="proyecto.desviacion.valor" placeholder="">
+                     
+                          </div>
+
+                    </div>
+                        <div class="form-group">
+                        <label for="proyecto.desviacion.tiempo" class="col-sm-4 control-label">Dev. Tiempo</label>
+                        <div class="col-sm-2">
+                            <input type="number" ng-model="proyecto.desviacion.tiempo" class="form-control" id="proyecto.desviacion.tiempo">
+                      
+                        </div>
+
+                    </div>
+                    
+                        <div class="form-group">
+                        <label for="proyecto.desviacion.alcance" class="col-sm-4 control-label">Dev Alcance</label>
+                        <div class="col-sm-2">
+                            <input type="number" ng-model="proyecto.desviacion.alcance" class="form-control" id="proyecto.desviacion.alcance">
+                       
+                        </div>
+   
+                    </div>
+                      <div class="form-group">
+                        <label for="proyecto.avance.comentarios" class="col-sm-4 control-label">Comentarios</label>
+                         <div class="col-sm-6">
+                                <textarea name="proyecto.avance.comentarios" id="proyecto.avance.comentarios" class="form-control" rows="4"  ></textarea>
+                           
+                             
+                            </div>
+   
+                    </div>
+                
+                 
+    </div>           
+  <div class="row">
+   <div class="col-sm-8"></div>
+     <div class="col-sm-4">
+    <button class="btn btn-success" type="submit">Guardar</button>
+</div>
+  </div>
+   </form>
+
+
+        </div> 
+  </div> 
+  
+   <div  class="col-lg-5" style="height: 350px; overflow-y: scroll;">
+  
+   <div class="panel panel-default">
+            <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>Actualizar Entregables</strong></div>
+     
+          <table  class="table table-hover"> 
+       <thead>
+       <th>Documento</th>    
+       <th>Fecha Entrega</th>
+       <th>Status</th>
+        <th></th>
+       </thead>
+       <tbody>
+       <tr>
+         <td><label class="ui-checkbox"><input checked name="checkbox1" type="checkbox" value="option1"><span>Documento prueba  1</span></label></td>
+       
+       
+        <td>21/10/2014</td>
+         <td>Subido</td>
+         <td><button class="btn btn-sm btn-danger">Eliminar</button></td>
+        </tr>
+      
+        <tr>
+      
+       </tbody>
+          </table>
+     
+     </div>   
+   </div>
+  </div>
+   <div class="row">
+     <div  class="col-lg-10">
+  <div class="panel panel-default">
+  <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>Otros Anexos </strong></div>
+  </div>
+  </div>
+
+    
+   </div>
+
+</div>

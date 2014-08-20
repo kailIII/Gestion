@@ -1,0 +1,8 @@
+.file-input-wrapper {
+overflow: hidden;
+overflow-x: hidden;
+overflow-y: hidden;
+position: relative;
+cursor: pointer;
+z-index: 1;
+}
