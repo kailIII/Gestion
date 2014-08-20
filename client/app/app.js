@@ -5,8 +5,8 @@ angular.module('gestionApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap',
-  'fundoo.services'
+  'ui.bootstrap'
+
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
