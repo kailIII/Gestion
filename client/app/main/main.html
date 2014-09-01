@@ -1,9 +1,100 @@
 <div class="page">
 
     <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Blank Page</strong></div>
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Dashboard</strong></div>
         <div class="panel-body">
-            <p>Content goes here</p>
+        <div class="row">
+
+            <div class="col-md-12">
+                <accordion close-others="oneAtATime" class="ui-accordion">
+                    <accordion-group heading="Graficos de Proyecto" is-open="status.isFirstOpen">
+                        <div class="row">
+                            <div class="col-md-4">
+
+                                        <div google-chart chart="chartObject" style="{{cssStyle}}"></div>
+
+                            </div>
+                            <div class="col-md-4">
+
+                                        <div google-chart chart="chartObject" style="{{cssStyle}}"></div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                                        <div google-chart chart="chartObject" style="{{cssStyle}}"></div>
+
+                            </div>
+                 </div>
+
+
+                     </accordion-group>
+                </accordion>
+            </div>
+        </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Disponibilidad Equipo</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div google-chart chart="chartObject2" style="{{cssStyle}}"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Entregables Atrasados</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                             <thead>
+                             <th colspan="2">Entregable</th>
+                             <th colspan="1">Fecha</th>
+                             </thead>
+                              <tbody>
+                              <tr ng-repeat=""></tr>
+
+                              </tbody>
+                              </table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Proximos Entregables</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                <th colspan="2">Entregable</th>
+                                <th colspan="1">Fecha</th>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat=""></tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 

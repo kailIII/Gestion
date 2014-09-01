@@ -5,7 +5,8 @@ angular.module('gestionApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+   'googlechart'
 
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
