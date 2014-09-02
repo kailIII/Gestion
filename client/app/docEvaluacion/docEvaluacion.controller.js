@@ -21,10 +21,15 @@ angular.module('gestionApp')
         $scope.listas.tipoAdjunto=['Doc Pre Evaluacion','Documento de Inicio','Doc. Solicitud']
 $scope.listas.tipoEntregable=['Doc Diseño','Doc Especificaciones','Doc Soporte']
         $scope.proyecto.entregables=[]
-
+        $scope.listas.tipoProyecto=['Operacional','Estrategico','Innovación']
+        $scope.listas.complejidadProyecto=['simple','Mediano','Complejo']
         $scope.agregar=function(){
 
-            $scope.proyecto.entregables.push($scope.proyecto.tipoEntregable)
+            var docEntregable ={}
+docEntregable.tipoEntregable = $scope.proyecto.tipoEntregable
+docEntregable.semanaEntrega =$scope.proyecto.entregables.semana
+
+            $scope.proyecto.entregables.push(docEntregable)
         }
 
   });

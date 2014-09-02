@@ -21,6 +21,12 @@ angular.module('gestionApp')
     };
 
 
+$scope.proyecto ={}
+$scope.proyecto.calendario =[{"id":"Enero","num":4},{"id":"Febrero","num":4},{"id":"Marzo","num":5},{"id":"Abril","num":5},
+{"id":"Mayo","num":4},{"id":"Junio","num":4},{"id":"Julio","num":4},{"id":"Agosto","num":4},{"id":"Septiembre","num":4},
+{"id":"Octubre","num":4},{"id":"Noviembre","num":4},{"id":"Diciembre","num":4}]
+
+
         $scope.chartObject = {
             "type": "PieChart",
             "displayed": true,
@@ -137,7 +143,238 @@ angular.module('gestionApp')
             },
             "formatters": {}
         }
-
+         $scope.chartObject4 = {
+            "type": "PieChart",
+            "displayed": true,
+            "data": {
+                "cols": [
+                    {
+                        "id": "month",
+                        "label": "Month",
+                        "type": "string",
+                        "p": {}
+                    },
+                    {
+                        "id": "laptop-id",
+                        "label": "Laptop",
+                        "type": "number",
+                        "p": {}
+                    },
+                    {
+                        "id": "desktop-id",
+                        "label": "Desktop",
+                        "type": "number",
+                        "p": {}
+                    },
+                    {
+                        "id": "server-id",
+                        "label": "Server",
+                        "type": "number",
+                        "p": {}
+                    },
+                    {
+                        "id": "cost-id",
+                        "label": "Shipping",
+                        "type": "number"
+                    }
+                ],
+                "rows": [
+                    {
+                        "c": [
+                            {
+                                "v": "Estrategico"
+                            },
+                            {
+                                "v": 19,
+                                "f": "42 Proyectos"
+                            },
+                            {
+                                "v": 12,
+                                "f": "12 Proyectos"
+                            },
+                            {
+                                "v": 7,
+                                "f": "7 servers"
+                            },
+                            {
+                                "v": 3
+                            }
+                        ]
+                    },
+                    {
+                        "c": [
+                            {
+                                "v": "Operacional"
+                            },
+                            {
+                                "v": 13
+                            },
+                            {
+                                "v": 1,
+                                "f": "1 unit (Out of stock this month)"
+                            },
+                            {
+                                "v": 12
+                            },
+                            {
+                                "v": 2
+                            }
+                        ]
+                    },
+                    {
+                        "c": [
+                            {
+                                "v": "Innovación"
+                            },
+                            {
+                                "v": 24
+                            },
+                            {
+                                "v": 5
+                            },
+                            {
+                                "v": 11
+                            },
+                            {
+                                "v": 6
+                            }
+                        ]
+                    }
+                ]
+            },
+            "options": {
+                "title": "Proyectos por Estado",
+                "isStacked": "true",
+                "fill": 20,
+                "displayExactValues": true,
+                "vAxis": {
+                    "title": "Sales unit",
+                    "gridlines": {
+                        "count": 10
+                    }
+                },
+                "hAxis": {
+                    "title": "Date"
+                }
+            },
+            "formatters": {}
+        }  
+   $scope.chartObject3 = {
+            "type": "PieChart",
+            "displayed": true,
+            "data": {
+                "cols": [
+                    {
+                        "id": "month",
+                        "label": "Month",
+                        "type": "string",
+                        "p": {}
+                    },
+                    {
+                        "id": "laptop-id",
+                        "label": "Laptop",
+                        "type": "number",
+                        "p": {}
+                    },
+                    {
+                        "id": "desktop-id",
+                        "label": "Desktop",
+                        "type": "number",
+                        "p": {}
+                    },
+                    {
+                        "id": "server-id",
+                        "label": "Server",
+                        "type": "number",
+                        "p": {}
+                    },
+                    {
+                        "id": "cost-id",
+                        "label": "Shipping",
+                        "type": "number"
+                    }
+                ],
+                "rows": [
+                    {
+                        "c": [
+                            {
+                                "v": "Estrategico"
+                            },
+                            {
+                                "v": 19,
+                                "f": "42 Proyectos"
+                            },
+                            {
+                                "v": 12,
+                                "f": "12 Proyectos"
+                            },
+                            {
+                                "v": 7,
+                                "f": "7 servers"
+                            },
+                            {
+                                "v": 3
+                            }
+                        ]
+                    },
+                    {
+                        "c": [
+                            {
+                                "v": "Operacional"
+                            },
+                            {
+                                "v": 13
+                            },
+                            {
+                                "v": 1,
+                                "f": "1 unit (Out of stock this month)"
+                            },
+                            {
+                                "v": 12
+                            },
+                            {
+                                "v": 2
+                            }
+                        ]
+                    },
+                    {
+                        "c": [
+                            {
+                                "v": "Innovación"
+                            },
+                            {
+                                "v": 24
+                            },
+                            {
+                                "v": 5
+                            },
+                            {
+                                "v": 11
+                            },
+                            {
+                                "v": 6
+                            }
+                        ]
+                    }
+                ]
+            },
+            "options": {
+                "title": "Proyectos por Salud",
+                "isStacked": "true",
+                "fill": 20,
+                "displayExactValues": true,
+                "vAxis": {
+                    "title": "Sales unit",
+                    "gridlines": {
+                        "count": 10
+                    }
+                },
+                "hAxis": {
+                    "title": "Date"
+                }
+            },
+            "formatters": {}
+        }
 
 
         $scope.chartObject2 = {

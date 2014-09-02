@@ -55,15 +55,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label  for="proyecto.costoOnOff" class="col-sm-2 control-label">Costo On-off</label>
+                            <label  for="proyecto.costoOnOff" class="col-sm-2 control-label">Costo On-off (USD)</label>
                             <div class="col-sm-2">
                                 <input type="number" class="form-control" id="proyecto.costoOnOff" ng-model=proyecto.costoOnOff>
                             </div>
-                            <label for="proyecto.costoOngGoing"   class="col-sm-2 control-label">Costo On-going</label>
+                            <label for="proyecto.costoOngGoing"   class="col-sm-2 control-label">Costo On-going (USD)</label>
                             <div class="col-sm-2">
                                 <input type="number" class="form-control" id="proyecto.costoOngGoing" ng-model=proyecto.costoOngGoing>
                             </div>
-                            <label for="proyecto.beneficios"   class="col-sm-2 control-label">Beneficios</label>
+                            <label for="proyecto.beneficios"   class="col-sm-2 control-label">Beneficios (USD)</label>
                             <div class="col-sm-2">
                                 <input type="number" class="form-control" id="proyecto.beneficios" ng-model=proyecto.beneficios>
                             </div>
@@ -73,6 +73,16 @@
                             <div class="col-sm-10">
                                 <textarea name="proyecto.beneficiosIntangibles" id="proyecto.beneficiosIntangibles" class="form-control" rows="3" >{{proyecto.beneficiosIntangibles}}</textarea>
                             </div>
+                        </div>
+                        <div class="form-group">
+                         <label for="proyecto.TipoProyecto"   class="col-sm-2 control-label">Tipo de Proyecto</label>
+                             <div class="col-sm-2">
+                                    <span class="ui-select"><select ng-model="proyecto.tipoProyecto" ng-options="opt for opt in listas.tipoProyecto"></select></span>
+                                </div>
+                             <label for="proyecto.complejidadProyecto"   class="col-sm-2 control-label">Complejidad Proyecto</label>
+                             <div class="col-sm-2">
+                                    <span class="ui-select"><select ng-model="proyecto.complejidadProyecto" ng-options="opt for opt in listas.complejidadProyecto"></select></span>
+                                </div>
                         </div>
                     </form>
                 </div>
@@ -204,7 +214,7 @@
                            </div>
                         </section>
                         <div  class="col-sm-offset-2 col-sm-10" align="right">
-                            <button type="submit" class="btn btn-success">Enviar</button>
+                             <button type="submit" class="btn btn-default">Guardar</button>  <button type="submit" class="btn btn-success">Enviar</button>
                         </div>
 
 

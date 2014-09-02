@@ -55,15 +55,15 @@
                 </div>
             </div>
             <div class="form-group">
-                <label  for="proyecto.costoOnOff" class="col-sm-2 control-label">Costo On-off</label>
+                <label  for="proyecto.costoOnOff" class="col-sm-2 control-label">Costo On-off (USD)</label>
                 <div class="col-sm-2">
                     <input type="text" class="form-control" id="proyecto.costoOnOff" ng-model=proyecto.costoOnOff>
                 </div>
-                <label for="proyecto.costoOnGoing"   class="col-sm-2 control-label">Costo On-going</label>
+                <label for="proyecto.costoOnGoing"   class="col-sm-2 control-label">Costo On-going (USD)</label>
                 <div class="col-sm-2">
                     <input type="text" class="form-control" id="proyecto.costoOnGoing" ng-model=proyecto.costoOnGoing>
                 </div>
-                <label for="proyecto.beneficios"   class="col-sm-2 control-label">Beneficios</label>
+                <label for="proyecto.beneficios"   class="col-sm-2 control-label">Beneficios (USD)</label>
                 <div class="col-sm-2">
                     <input type="text" class="form-control" id="proyecto.beneficios" ng-model=proyecto.beneficios>
                 </div>
@@ -84,7 +84,16 @@
                     <input type="number" class="form-control" id="proyecto.duracionEstimada" ng-model=proyecto.duracionEstimada>
                 </div>
             </div>
-
+                    <div class="form-group">
+                         <label for="proyecto.TipoProyecto"   class="col-sm-2 control-label">Tipo de Proyecto</label>
+                             <div class="col-sm-2">
+                                    <span class="ui-select"><select ng-model="proyecto.tipoProyecto" ng-options="opt for opt in listas.tipoProyecto"></select></span>
+                                </div>
+                             <label for="proyecto.complejidadProyecto"   class="col-sm-2 control-label">Complejidad Proyecto</label>
+                             <div class="col-sm-2">
+                                    <span class="ui-select"><select ng-model="proyecto.complejidadProyecto" ng-options="opt for opt in listas.complejidadProyecto"></select></span>
+                                </div>
+                    </div>
         </form>
     </div>
 </section>
@@ -144,11 +153,17 @@
         <div class="col-lg-6">
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label  class="col-sm-4 control-label">Nuevo Entregable</label>
+                    <label  class="col-sm-2 control-label">Nuevo Entregable</label>
 
-                    <div class="input-group col-sm-4">
+                    <div class="input-group col-sm-2">
                         <span class="ui-select"><select ng-model="proyecto.tipoEntregable" ng-options="opt for opt in listas.tipoEntregable"></select></span>
+                   
                     </div>
+                     <label  class="col-sm-2 control-label">Semana Entrega</label>
+                     <div class="col-sm-2">
+                    <input type="text" class="form-control" id="proyecto.entregables.semana" ng-model=proyecto.entregables.semana>
+                         
+                     </div>
                     <div class="input-group col-sm-4" align="right">
                                         <button ng-click="agregar()" class="btn btn-default" type="button">Agregar</button>
 </div>
@@ -165,7 +180,7 @@
             <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Entregables </strong></div>
             <ul class="list-group">
                 <li  class="list-group-item" data-ng-repeat="store in proyecto.entregables">
-                  {{store}}
+                  {{store.tipoEntregable}} /  {{store.semanaEntrega}}
                 </li>
 
             </ul>
