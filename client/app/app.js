@@ -6,6 +6,7 @@ angular.module('gestionApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
+  'fundoo.services',
    'googlechart'
 
 ])

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gestionApp')
-  .controller('MisproyectosCtrl',['$scope', function($scope) {
+  .controller('MisproyectosCtrl',['$scope','createDialog', function($scope,createDialogService) {
     $scope.message = 'Hello';
 
         $scope.lstProyectos =[
@@ -41,4 +41,21 @@ angular.module('gestionApp')
 
 
 
-    }]);
+
+$scope.launchComplexModal = function() {
+			createDialogService('app/auditoria/auditoria.html', {
+              id: 'simpleDialog',
+              title: 'Auditoria Proyectos',
+              backdrop: true,
+              success: {label: 'Success', fn: function() {console.log('Simple modal closed');}}
+            });
+		};
+
+
+
+
+
+   }]);
+
+
+
